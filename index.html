@@ -676,50 +676,34 @@ Let's discuss your business goals.
 
 <div class="contact-form" data-aos="fade-left">
 
-<form id="ai-discovery-form">
+<form id="ai-discovery-form" action="https://api.web3forms.com/submit" method="POST">
+  <!-- Web3Forms Access Key & Config -->
+  <input type="hidden" name="access_key" value="1d50b726-56a2-4460-82f0-410483426bc8">
+  <input type="hidden" name="subject" value="New AI Discovery Lead from Vinovam.com">
+  <input type="hidden" name="from_name" value="Vinovam Website">
+  
+  <!-- Anti-Spam Honeypot -->
+  <input type="checkbox" name="botcheck" style="display: none;">
 
-<div class="form-group">
+  <div class="form-group">
+    <input type="text" name="name" placeholder="Your Name" required>
+  </div>
 
-<input
-type="text"
-placeholder="Your Name"
-required>
+  <div class="form-group">
+    <input type="email" name="email" placeholder="Business Email" required>
+  </div>
 
-</div>
+  <div class="form-group">
+    <input type="text" name="company" placeholder="Company Name">
+  </div>
 
-<div class="form-group">
+  <div class="form-group">
+    <textarea name="message" rows="5" placeholder="Tell us about your AI initiative" required></textarea>
+  </div>
 
-<input
-type="email"
-placeholder="Business Email"
-required>
-
-</div>
-
-<div class="form-group">
-
-<input
-type="text"
-placeholder="Company Name">
-
-</div>
-
-<div class="form-group">
-
-<textarea
-rows="5"
-placeholder="Tell us about your AI initiative"></textarea>
-
-</div>
-
-<button
-type="submit"
-class="primary-btn btn-block">
-
-Book AI Discovery Session
-
-</button>
-
+  <button type="submit" class="primary-btn btn-block">
+    Book AI Discovery Session
+  </button>
 </form>
 
 </div>
