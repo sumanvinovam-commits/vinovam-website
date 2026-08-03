@@ -1,1 +1,5 @@
-
+body{margin:0;font-family:Arial,sans-serif;background:#07111F;color:#fff}
+header{padding:20px 8%;display:flex;justify-content:space-between;align-items:center}
+.hero{padding:100px 8%;background:linear-gradient(135deg,#07111F,#12284d)}
+.btn{display:inline-block;padding:14px 24px;background:#3b82f6;color:#fff;text-decoration:none;border-radius:8px}
+section{padding:60px 8%}footer{padding:30px 8%;border-top:1px solid #333}
