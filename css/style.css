@@ -1,5 +1,224 @@
-body{margin:0;font-family:Arial,sans-serif;background:#07111F;color:#fff}
-header{padding:20px 8%;display:flex;justify-content:space-between;align-items:center}
-.hero{padding:100px 8%;background:linear-gradient(135deg,#07111F,#12284d)}
-.btn{display:inline-block;padding:14px 24px;background:#3b82f6;color:#fff;text-decoration:none;border-radius:8px}
-section{padding:60px 8%}footer{padding:30px 8%;border-top:1px solid #333}
+/* ==========================================================
+   VINOVAM DESIGN SYSTEM & STYLESHEET
+   ========================================================== */
+
+/* 1. Custom Properties & Tokens */
+:root {
+  --bg-main: #07111f;
+  --bg-surface: rgba(18, 32, 59, 0.6);
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(59, 130, 246, 0.4);
+
+  --accent-primary: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-glow: rgba(59, 130, 246, 0.35);
+
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+  --text-sub: #cbd5e1;
+
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 2. Global Resets & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 3. Header & Navigation */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(7, 17, 31, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--text-main);
+}
+
+/* 4. Hero Section */
+.hero {
+  position: relative;
+  padding: 120px 8% 100px;
+  background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15), transparent 60%),
+              linear-gradient(135deg, #07111f 0%, #12284d 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  max-width: 800px;
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 620px;
+}
+
+/* 5. Buttons & Interactivity */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: var(--accent-primary);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  box-shadow: 0 4px 14px var(--accent-glow);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  border: 1px solid var(--border-light);
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 6. Content Sections & Grid Layouts */
+section {
+  padding: 80px 8%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* 7. Footer */
+footer {
+  padding: 40px 8%;
+  background: #040a14;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* 8. Mobile Responsiveness */
+@media (max-width: 768px) {
+  header {
+    padding: 16px 5%;
+  }
+  
+  .hero {
+    padding: 80px 5% 60px;
+  }
+  
+  section {
+    padding: 60px 5%;
+  }
+  
+  footer {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
