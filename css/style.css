@@ -817,15 +817,47 @@ footer hr {
     grid-template-columns: 1fr;
   }
 }
-.logo-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* ==========================================================
+   HEADER LOGO STYLES
+   ========================================================== */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
 }
 
-.logo-icon img {
-    width: 40px;      /* adjust as needed */
-    height: 40px;
-    display: block;
-    object-fit: contain;
+.logo-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-icon-wrap {
+  transform: translateY(-1px);
+}
+
+.logo:hover svg {
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
+}
+
+.logo-text h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.logo-text p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  color: #94a3b8;
+  margin: 2px 0 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
