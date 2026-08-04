@@ -185,15 +185,15 @@ h1, h2, h3, h4 {
   box-shadow: 0 6px 20px rgba(245, 124, 0, 0.5);
 }
 
-/* Navbar & FULL UNCROPPED LOGO STYLING */
+/* Navbar & LARGE VERTICAL LOGO OVERHAUL */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 18px 0;
-  background: rgba(7, 17, 31, 0.88);
+  padding: 10px 0;
+  background: rgba(7, 17, 31, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-color);
@@ -212,19 +212,39 @@ h1, h2, h3, h4 {
   text-decoration: none;
 }
 
-/* Full Header Logo Styling */
+/* White Pill Box Container */
+.logo-box {
+  background: #ffffff;
+  padding: 6px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+  height: 64px;
+  width: 190px;
+  overflow: hidden;
+}
+
+/* Image scaling to crop past file.svg blank canvas */
 .brand-full-logo {
-  height: 48px;
-  width: auto;
+  height: 110px;
+  width: 220px;
+  object-fit: cover;
+  object-position: center;
   display: block;
-  object-fit: contain;
-  filter: brightness(0) invert(1) drop-shadow(0 0 12px rgba(245, 124, 0, 0.4));
+  transform: scale(1.35);
   transition: var(--transition);
 }
 
-.logo:hover .brand-full-logo {
+.logo:hover .logo-box {
   transform: translateY(-1px);
-  filter: brightness(0) invert(1) drop-shadow(0 0 18px rgba(245, 124, 0, 0.7));
+  box-shadow: 0 6px 25px rgba(245, 124, 0, 0.4);
+}
+
+.logo:hover .brand-full-logo {
+  transform: scale(1.4);
 }
 
 .navbar nav ul {
@@ -786,7 +806,7 @@ h1, h2, h3, h4 {
   margin-bottom: 36px;
 }
 
-/* Footer & Full Footer Logo Styling */
+/* Footer Styling */
 footer {
   background: #030810;
   border-top: 1px solid var(--border-color);
@@ -800,12 +820,24 @@ footer {
   margin-bottom: 48px;
 }
 
-.footer-full-logo {
-  height: 40px;
-  width: auto;
-  display: block;
+.footer-logo-box {
+  background: #ffffff;
+  padding: 6px 14px;
+  border-radius: 10px;
+  display: inline-block;
   margin-bottom: 16px;
-  filter: brightness(0) invert(1);
+  height: 48px;
+  width: 150px;
+  overflow: hidden;
+}
+
+.footer-full-logo {
+  height: 80px;
+  width: 160px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transform: scale(1.3);
 }
 
 .footer-brand .tagline {
