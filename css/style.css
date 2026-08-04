@@ -185,7 +185,7 @@ h1, h2, h3, h4 {
   box-shadow: 0 6px 20px rgba(245, 124, 0, 0.5);
 }
 
-/* Navbar & LARGE VERTICAL LOGO OVERHAUL */
+/* Navbar & HEADER LOGO STYLING */
 .navbar {
   position: fixed;
   top: 0;
@@ -215,7 +215,7 @@ h1, h2, h3, h4 {
 /* White Pill Box Container */
 .logo-box {
   background: #ffffff;
-  padding: 6px 16px;
+  padding: 6px 14px;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -227,14 +227,14 @@ h1, h2, h3, h4 {
   overflow: hidden;
 }
 
-/* Image scaling to crop past file.svg blank canvas */
+/* Full Uncropped SVG Logo Scaling */
 .brand-full-logo {
-  height: 110px;
-  width: 220px;
-  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
   object-position: center;
   display: block;
-  transform: scale(1.35);
+  transform: none;
   transition: var(--transition);
 }
 
@@ -244,7 +244,7 @@ h1, h2, h3, h4 {
 }
 
 .logo:hover .brand-full-logo {
-  transform: scale(1.4);
+  transform: scale(1.03);
 }
 
 .navbar nav ul {
@@ -832,12 +832,11 @@ footer {
 }
 
 .footer-full-logo {
-  height: 80px;
-  width: 160px;
-  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
   object-position: center;
   display: block;
-  transform: scale(1.3);
 }
 
 .footer-brand .tagline {
