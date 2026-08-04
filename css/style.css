@@ -185,7 +185,7 @@ h1, h2, h3, h4 {
   box-shadow: 0 6px 20px rgba(245, 124, 0, 0.5);
 }
 
-/* Navbar & LOGO STYLING FOR file.svg */
+/* Navbar & PROMINENT BRAND LOGO STYLING */
 .navbar {
   position: fixed;
   top: 0;
@@ -209,22 +209,60 @@ h1, h2, h3, h4 {
 .logo {
   display: flex;
   align-items: center;
+  gap: 14px;
   text-decoration: none;
 }
 
-/* Clear, Filtered SVG Logo */
-.brand-logo-img {
-  height: 42px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-  filter: brightness(1.25) contrast(1.1) drop-shadow(0 0 10px rgba(245, 124, 0, 0.35));
+/* Scaled Vector Icon Wrapper */
+.logo-mark-wrap {
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-icon-img {
+  width: 140px; /* Crops inward to feature the V-symbol cleanly */
+  height: auto;
+  max-width: none;
+  margin-left: -5px;
+  margin-top: -10px;
+  filter: drop-shadow(0 0 10px rgba(245, 124, 0, 0.35));
   transition: var(--transition);
 }
 
-.logo:hover .brand-logo-img {
-  transform: translateY(-1px);
-  filter: brightness(1.35) contrast(1.15) drop-shadow(0 0 16px rgba(245, 124, 0, 0.6));
+.logo:hover .brand-icon-img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 16px rgba(245, 124, 0, 0.6));
+}
+
+/* High-Impact Typography for Brand Name */
+.logo-text-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.75rem; /* Large, crisp title */
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  background: linear-gradient(180deg, #ffffff 30%, #f57c00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-sub {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 1.2px;
+  margin-top: 3px;
 }
 
 .navbar nav ul {
@@ -800,18 +838,11 @@ footer {
   margin-bottom: 48px;
 }
 
-.footer-logo-img {
-  height: 36px;
-  width: auto;
-  display: block;
-  margin-bottom: 16px;
-  filter: brightness(1.2) contrast(1.1);
-}
-
 .footer-brand .tagline {
   color: #ffb74d;
   font-size: 0.85rem;
   font-weight: 600;
+  margin-top: 16px;
   margin-bottom: 12px;
 }
 
