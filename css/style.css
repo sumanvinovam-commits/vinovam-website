@@ -817,3 +817,15 @@ footer hr {
     grid-template-columns: 1fr;
   }
 }
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon img {
+    width: 40px;      /* adjust as needed */
+    height: 40px;
+    display: block;
+    object-fit: contain;
+}
