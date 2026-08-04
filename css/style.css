@@ -185,14 +185,14 @@ h1, h2, h3, h4 {
   box-shadow: 0 6px 20px rgba(245, 124, 0, 0.5);
 }
 
-/* Navbar & LOGO OVERHAUL */
+/* Navbar & LOGO STYLING */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 18px 0;
+  padding: 16px 0;
   background: rgba(7, 17, 31, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -206,48 +206,26 @@ h1, h2, h3, h4 {
   justify-content: space-between;
 }
 
-/* Seamless Header Brand Logo */
 .logo {
   display: flex;
   align-items: center;
-  gap: 14px;
   text-decoration: none;
 }
 
-.logo-mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  filter: drop-shadow(0 0 10px rgba(245, 124, 0, 0.4));
+/* Header SVG File: Erases white background rectangle */
+.brand-file-svg {
+  height: 52px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  mix-blend-mode: lighten;
+  filter: contrast(1.2) brightness(1.1) drop-shadow(0 0 10px rgba(245, 124, 0, 0.4));
   transition: var(--transition);
 }
 
-.logo:hover .logo-mark {
-  transform: translateY(-1px) scale(1.05);
-  filter: drop-shadow(0 0 16px rgba(245, 124, 0, 0.7));
-}
-
-.logo-text-block {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-title {
-  font-family: var(--font-heading);
-  font-size: 2.2rem; /* Large, bold brand text */
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  line-height: 0.95;
-  color: #ffffff;
-}
-
-.brand-tagline {
-  font-family: var(--font-body);
-  font-size: 0.65rem;
-  font-weight: 600;
-  color: var(--accent-orange);
-  letter-spacing: 0.8px;
-  margin-top: 4px;
+.logo:hover .brand-file-svg {
+  transform: translateY(-1px);
+  filter: contrast(1.25) brightness(1.2) drop-shadow(0 0 16px rgba(245, 124, 0, 0.7));
 }
 
 .navbar nav ul {
@@ -809,7 +787,7 @@ h1, h2, h3, h4 {
   margin-bottom: 36px;
 }
 
-/* Footer Styling */
+/* Footer & Footer SVG File Styling */
 footer {
   background: #030810;
   border-top: 1px solid var(--border-color);
@@ -821,6 +799,15 @@ footer {
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 40px;
   margin-bottom: 48px;
+}
+
+.footer-file-svg {
+  height: 44px;
+  width: auto;
+  display: block;
+  margin-bottom: 16px;
+  mix-blend-mode: lighten;
+  filter: contrast(1.2) brightness(1.1);
 }
 
 .footer-brand .tagline {
