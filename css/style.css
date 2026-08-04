@@ -192,7 +192,7 @@ h1, h2, h3, h4 {
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 14px 0;
+  padding: 18px 0;
   background: rgba(7, 17, 31, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -212,29 +212,19 @@ h1, h2, h3, h4 {
   text-decoration: none;
 }
 
-/* Compact White Pill Wrapper */
-.logo-img-wrapper {
-  background: #ffffff;
-  padding: 4px 10px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-  transition: var(--transition);
-}
-
-/* Resized Compact Image Height */
+/* Prominent, Filtered SVG Logo */
 .brand-logo-img {
-  height: 24px;
+  height: 38px;
   width: auto;
   display: block;
   object-fit: contain;
+  filter: brightness(0) invert(1) drop-shadow(0 0 12px rgba(245, 124, 0, 0.35));
+  transition: var(--transition);
 }
 
-.logo:hover .logo-img-wrapper {
+.logo:hover .brand-logo-img {
   transform: translateY(-1px);
-  box-shadow: 0 0 20px rgba(245, 124, 0, 0.35);
+  filter: brightness(0) invert(1) drop-shadow(0 0 18px rgba(245, 124, 0, 0.65));
 }
 
 .navbar nav ul {
@@ -810,18 +800,12 @@ footer {
   margin-bottom: 48px;
 }
 
-.footer-logo-wrap {
-  background: #ffffff;
-  padding: 6px 12px;
-  border-radius: 8px;
-  display: inline-block;
-  margin-bottom: 16px;
-}
-
 .footer-logo-img {
-  height: 24px;
+  height: 32px;
   width: auto;
   display: block;
+  margin-bottom: 16px;
+  filter: brightness(0) invert(1);
 }
 
 .footer-brand .tagline {
